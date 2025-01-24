@@ -1,6 +1,14 @@
 # WordleBot
 This program solves today's Wordle problem in Chrome using the Selenium WebDriver.
 
+## Table of Contents
+1. [Required Gems](#required-gems)  
+2. [Installation](#installation)  
+3. [Run Script](#run-script)  
+4. [Add Words to sortedWords.txt](#add-words-to-sortedwordstxt)  
+5. [Included Ruby Files](#included-ruby-files)  
+6. [Included .txt Files](#included-txt-files) 
+
 ## Required Gems
 - `selenium-webdriver`
 
