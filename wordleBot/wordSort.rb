@@ -1,6 +1,6 @@
 # File: wordSort.rb
 # Author: Arvid Möller
-# Date: 2025-01-23
+# Date: 2025-01-24
 # Description: This program adds words from addWords.txt (if they aren't already in words.txt) and then sorts all words in words.txt file based on how common their letters are.
 # Requried files: words.txt, sortedWords.txt, addWords.txt
 # Requried gems: void
