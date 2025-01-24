@@ -99,13 +99,13 @@ $driver.navigate.to "https://www.nytimes.com/games/wordle"
 # Navigate to the game (and avoid cookies)
 wait = Selenium::WebDriver::Wait.new(:timeout => 10)
 search_button = wait.until{$driver.find_element(:xpath, "/html/body/div[1]/div/div[2]/div/div/div/div[3]/div[1]/button[1]")}
-$driver.manage.timeouts.implicit_wait = 1  #tmp lösning, väntar på animation
+$driver.manage.timeouts.implicit_wait = 1
 
 $driver.find_element(:xpath, "/html/body/div[1]/div/div[2]/div/div/div/div[3]/div[1]/button[1]").click
 $driver.find_element(:xpath, "/html/body/div[4]/div/div/button").click
 $driver.find_element(:xpath, "/html/body/div[3]/div/div/div/div/div[2]/button[3]").click
 
-$driver.manage.timeouts.implicit_wait = 1  #tmp lösning, väntar på animation
+$driver.manage.timeouts.implicit_wait = 1
 $driver.find_element(:xpath, "/html/body/div[3]/div/dialog/div/div/button").click
 
 footer = $driver.find_element(:xpath, "/html/body/div[3]/div/footer")

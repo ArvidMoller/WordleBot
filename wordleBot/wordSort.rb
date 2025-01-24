@@ -68,6 +68,8 @@ end
 #
 # Returns: void
 def wordSort()
+  checkWords()
+
   letterArr = ["E","A","R","I","O","T","N","S","L","C","U","D","P","M","H","G","B","F","Y","W","K","V","X","Z","J","Q"]
   wordPointArr = Array.new
   sortedArr = Array.new
@@ -104,5 +106,4 @@ def wordSort()
 end
 
 
-checkWords()
 wordSort()
