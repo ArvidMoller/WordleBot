@@ -41,9 +41,9 @@ end
 def checkWords()
   wordArr = File.readlines("words.txt")   # Reads words.txt to an array
   addArr = Array.new
-  
+
   wordArr.each do |word|  # Chomps all words in words.txt
-    word.chomp
+    word.chomp!
   end
 
   File.open("addWords.txt", "r") do |file|  # Loops through all words in addWords.txt.
@@ -55,7 +55,7 @@ def checkWords()
     end
   end
 
-  File.open("words.txt", "w") do |file|   # addArr gets added to words.txt
+  File.open("words.txt", "a") do |file|   # addArr gets added to words.txt
     addArr.each_entry do |e|
       file.write(e, "\n")
     end
