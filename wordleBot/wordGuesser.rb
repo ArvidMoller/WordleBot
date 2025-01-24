@@ -70,7 +70,7 @@ def wordGuesser(correct, present, absent, enterdWords)
           end
         end
       end
-      puts "No word found"
+      puts "Error: Word not found"
     end
   end
 end

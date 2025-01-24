@@ -7,7 +7,7 @@
 
 # Require Selenium (gem) and wordGuesser.rb (word guessing algorithm)
 require "selenium-webdriver"
-require_relative 'D:\Programmering\Tillämp\WordleBot\wordGuesser.rb'
+require_relative 'D:\Programmering\Tillämp\WordleBot\wordleBot\wordGuesser.rb'
 
 
 # Declare global variables
