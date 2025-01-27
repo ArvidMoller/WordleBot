@@ -60,6 +60,8 @@ def checkWords()
       file.write(e, "\n")
     end
   end
+
+  File.truncate("addWords.txt", 0)
 end
 
 # Gives all words in words.txt file points based on how common their letters are. sort() funciton is then called to sort the words so they can be enterd in the sortedWords.txt file.

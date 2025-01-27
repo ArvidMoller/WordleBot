@@ -36,8 +36,6 @@ def enterWord(str)
   $enterdWords << str
   $currentRow += 1
 
-  p str
-
   # Calculate xPaths for chars in word
   str.each_char do |char|
     i = 0
@@ -84,10 +82,6 @@ def getWordData()
     end
 
     i += 1
-
-    p "Correct: #{$correct}"
-    p "Present #{$present}"
-    p "Absent #{$absent}"
   end
 
   sleep 1
