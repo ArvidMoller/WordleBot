@@ -19,6 +19,7 @@
 def wordGuesser(correct, present, absent, enterdWords)
   if File.exist?("sortedWords.txt")
     File.open("sortedWords.txt", "r") do |file|   #Open sortedWords.txt file
+      potWordExist = false
       file.each_line do |word|    # Loop through all lines in sortedWords.txt
         word.chomp!
         wrong = false
@@ -51,7 +52,7 @@ def wordGuesser(correct, present, absent, enterdWords)
                 end
               end
             end
-          end
+          end  
 
           correctLetters = 0
           correct.each_entry do |e|   # Find numer of correct letters
@@ -61,6 +62,11 @@ def wordGuesser(correct, present, absent, enterdWords)
           end
           if correctLetters < 3
             if word.chars.uniq != word.chars  # The word can't include duplicate letters if there are less than three correct letters
+              if potWordExist == false && wrong == false  # Save word that matches all criteria exept duplicate letters for use if no other word is found
+                $potWord = word
+                potWordExist = true
+              end
+              
               wrong = true
             end
           end
@@ -70,7 +76,7 @@ def wordGuesser(correct, present, absent, enterdWords)
           end
         end
       end
-      puts "Error: Word not found"
+      return $potWord  # If no word is found return a word that has duplicate letters
     end
   end
 end
