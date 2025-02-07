@@ -62,7 +62,7 @@ def wordGuesser(correct, present, absent, enterdWords)
           end
           if correctLetters < 3
             if word.chars.uniq != word.chars  # The word can't include duplicate letters if there are less than three correct letters
-              if potWordExist == false && wrong == false  # Save word that matches all criteria exept duplicate letters for use if no other word is found
+              if !potWordExist && !wrong  # Save word that matches all criteria exept duplicate letters for use if no other word is found
                 $potWord = word
                 potWordExist = true
               end
@@ -71,7 +71,7 @@ def wordGuesser(correct, present, absent, enterdWords)
             end
           end
 
-          if wrong == false
+          if !wrong
             return word   # Return only words that have passed all criteria.
           end
         end

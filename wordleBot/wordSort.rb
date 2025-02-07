@@ -80,7 +80,7 @@ def wordSort()
     File.open("words.txt", "r") do |file|
       file.each_entry do |word|   # Loops through all words in words.txt.
         wordArr = [nil, 0]
-        wordArr[0] = word.chomp!  # Add word to wordArr
+        wordArr[0] = word.chomp!  # Add chomped word to wordArr
         
         wordArr[0].each_char do |currentLetter|
           wordArr[1] += letterArr.find_index(currentLetter)   # Gives the word a score based on how common it's letters are and add that score to wordArr
