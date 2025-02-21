@@ -102,9 +102,8 @@ $driver.find_element(:xpath, "/html/body/div[3]/div/div/div/div/div[2]/button[3]
 $driver.manage.timeouts.implicit_wait = 1   # Wait for animation
 $driver.find_element(:xpath, "/html/body/div[3]/div/dialog/div/div/button").click
 
-# Scroll to footer of website, outcommented because of error saying "xpath does not exist".
-# footer = $driver.find_element(:xpath, "/html/body/div[3]/div/footer")
-# $driver.action.scroll_to(footer).perform
+footer = $driver.find_element(:xpath, "/html/body/div[3]/div/div[4]/main/div[2]/div[3]")
+$driver.action.scroll_to(footer).perform
 
 # Play the game
 i = 0
